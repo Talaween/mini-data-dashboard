@@ -23,7 +23,7 @@ const ProductCard: React.FC<Product> = ({ image, title, price }) => (
         <p className="text-2xl font-bold text-purple-600">
           ${price}
         </p>
-        <AddToCartButton />
+        <AddToCartButton onClick={() => {}} />
       </div>
     </div>
   </div>
