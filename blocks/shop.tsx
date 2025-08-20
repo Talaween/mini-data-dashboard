@@ -31,6 +31,7 @@ const Shop = () => {
         onSearchChange={() => {}}
         sortValue={''}
         onSortChange={() => {}}
+        onReset={() => {}}
     />
     <ProductGrid products={products} loading={loading} error={error} />
     </>
