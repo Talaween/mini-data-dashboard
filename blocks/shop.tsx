@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import ProductGrid from '../components/product-grid'
+import ShopControls from './shop-controls'
 
 const Shop = () => {
 
@@ -24,7 +25,15 @@ const Shop = () => {
     }, []);
   
   return (
+    <>
+    <ShopControls 
+        searchValue={''}
+        onSearchChange={() => {}}
+        sortValue={''}
+        onSortChange={() => {}}
+    />
     <ProductGrid products={products} loading={loading} error={error} />
+    </>
   )
 }
 
