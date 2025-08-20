@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,19 +54,19 @@ const Navbar: React.FC = () => {
         `}
       >
         <li>
-          <a href="#" className="text-gray-200 font-medium hover:text-purple-300 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-white/10">
+          <Link href="/" className="text-gray-200 font-medium hover:text-purple-300 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-white/10">
             Products
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="text-gray-200 font-medium hover:text-purple-300 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-white/10">
+          <Link href="#" className="text-gray-200 font-medium hover:text-purple-300 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-white/10">
             Shipping
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="text-gray-200 font-medium hover:text-purple-300 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-white/10">
+          <Link href="#" className="text-gray-200 font-medium hover:text-purple-300 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-white/10">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
       

@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "./product-card";
-import { Product } from "../types/product";
+import { Product } from "../types/product.type";
 import { ProductGridSkeleton } from "./loading";
 
 interface ProductGridProps {
@@ -52,6 +52,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, loading, error }) =
             image={product.image}
             title={product.title}
             price={product.price} 
+            id={product.id}
           />
         ))}
       </div>
