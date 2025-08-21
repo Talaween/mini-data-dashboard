@@ -2,7 +2,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, to run the development server:
+
+- Clone the repository
+- Navigate to the project directory
+- add a .env.local file with the following variables:
+    
+    NEXT_PUBLIC_API_ENDPOINT=https://fakestoreapi.com
+    
+- Install dependencies
+- Run the development server
 
 ```bash
 npm run dev
