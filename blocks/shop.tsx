@@ -20,7 +20,8 @@ const Shop = () => {
                 setInitProducts(data);
                 setLoading(false);
             } catch (error) {
-                setError(error as string);
+                console.error('Error fetching products:', error);
+                setError(JSON.stringify(error));
                 setLoading(false);
             }
         };
@@ -46,7 +47,7 @@ const Shop = () => {
   return (
     <>
     <ShopControls />
-    <ProductGrid products={sortedProducts} loading={loading} error={error} />
+    <ProductGrid products={sortedProducts} loading={loading} error={''} />
     </>
   )
 }
