@@ -35,7 +35,8 @@ const ShopControls: React.FC = () => {
       </div>
       
       {/* Reset Button */}
-      <div className="w-full sm:w-auto">
+      {(searchValue || sortValue) && (
+        <div className="w-full sm:w-auto">
         <button
           onClick={resetFilters}
           className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-700 rounded-xl transition-colors duration-200 w-full sm:w-auto"
@@ -44,6 +45,7 @@ const ShopControls: React.FC = () => {
           Reset
         </button>
       </div>
+      )}
     </div>
   );
 };
