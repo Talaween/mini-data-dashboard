@@ -35,13 +35,13 @@ const Shop = () => {
 
     // Sort products based on sort value
     const sortedProducts = useMemo(() => {
-        if (!sortValue) return initProducts;
+        if (!sortValue && !searchValue) return initProducts;
         return filteredProducts.sort((a, b) => {
             if (sortValue === 'price-asc') return Number(a.price) - Number(b.price);
             if (sortValue === 'price-desc') return Number(b.price) - Number(a.price);
             return 0;
         });
-    }, [initProducts, filteredProducts, sortValue]);
+    }, [filteredProducts, initProducts, sortValue, searchValue]);
 
   return (
     <>

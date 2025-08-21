@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HiMagnifyingGlass } from 'react-icons/hi2';
 import { useShopControlsStore } from '../store/shop-controls';
 
 interface SearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
   placeholder?: string;
   className?: string;
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({ 
-  value, 
-  onChange, 
   placeholder = "Search products...", 
   className = "" 
 }) => {

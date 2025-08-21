@@ -6,7 +6,7 @@ import { useShopControlsStore } from '../store/shop-controls';
 
 const ShopControls: React.FC = () => {
 
-  const { searchValue, sortValue, resetFilters, setSearchValue, setSortValue } = useShopControlsStore();
+  const { searchValue, sortValue, resetFilters, setSortValue } = useShopControlsStore();
 
   const sortOptions = [
     { value: 'price-asc', label: 'Price: Low to High' },
@@ -18,8 +18,6 @@ const ShopControls: React.FC = () => {
       {/* Search Input - Left side */}
       <div className="flex-1">
         <SearchInput
-          value={searchValue}
-          onChange={setSearchValue}
           placeholder="Search products..."
         />
       </div>
