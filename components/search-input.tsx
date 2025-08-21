@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HiMagnifyingGlass } from 'react-icons/hi2';
+import { useShopControlsStore } from '../store/shop-controls';
 
 interface SearchInputProps {
   value: string;
@@ -14,8 +15,10 @@ const SearchInput: React.FC<SearchInputProps> = ({
   placeholder = "Search products...", 
   className = "" 
 }) => {
-    const [searchValue, setSearchValue] = useState(value);
-    
+
+  const { searchInputValue, setSearchInputValue, setSearchValue } = useShopControlsStore();
+  
+
   return (
     <div className={`relative ${className}`}>
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -23,11 +26,11 @@ const SearchInput: React.FC<SearchInputProps> = ({
       </div>
       <input
         type="text"
-        value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)}
+        value={searchInputValue}
+        onChange={(e) => setSearchInputValue(e.target.value)}
         onKeyDown={(e) => {
             if (e.key === 'Enter') {
-                onChange(searchValue);
+                setSearchValue(searchInputValue);
             }
         }}
         placeholder={placeholder}
